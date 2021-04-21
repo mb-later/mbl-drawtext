@@ -11,3 +11,12 @@ function DrawText()
     icon = 'fas fa-heartbeat'
     TriggerEvent('mbl_drawtext:showNotification', { title = title, message = message, icon = icon })
 end
+
+
+RegisterCommand("drawtext", function()
+    DrawText()
+end)
+
+RegisterCommand("drawsil", function ()
+    TriggerEvent("mbl_drawtext:hideNotification")
+end)
