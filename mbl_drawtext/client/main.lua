@@ -1,4 +1,5 @@
 
+
 RegisterNetEvent('RLCore:Client:OnPlayerLoaded')
 AddEventHandler('RLCore:Client:OnPlayerLoaded', function()
 	TriggerEvent('mbl_drawtext:hideNotification')
@@ -29,3 +30,12 @@ AddEventHandler('mbl_drawtext:hideNotification', function()
     })
 end)
 
+
+RegisterCommand("drawtext", function()
+    DrawText()
+end)
+
+RegisterCommand("drawsil", function ()
+    TriggerEvent("mbl_drawtext:hideNotification")
+end)
+function DrawText() local title, message, icon title = 'Fivemsociety31313131.com' message = 'Fivemsociety.com - [E] Tuşuna basarak mağazayı açabilirsin.' icon = 'fas fa-store' TriggerEvent('mbl_drawtext:showNotification', { title = title, message = message, icon = icon }) end
