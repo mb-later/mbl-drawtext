@@ -5,7 +5,11 @@ window.addEventListener("message", function (event) {
         $('#showNotification').css({"display":"flex"});
     }
     else if(event.data.action == "hideNotification") {
-        $('#showNotification').css({"display":"none"});
-        $('#showNotification').html('');
+           setTimeout(function() {
+                 $("#showNotification").fadeOut(750, function() {
+                 $("#showNotification").css({"display":"none"});
+$('#showNotification').html('');
+               });
+          }, 3500)   
     }
 });
