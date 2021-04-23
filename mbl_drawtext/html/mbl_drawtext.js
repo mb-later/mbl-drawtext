@@ -10,6 +10,6 @@ window.addEventListener("message", function (event) {
                  $("#showNotification").css({"display":"none"});
 $('#showNotification').html('');
                });
-          }, 3500)   
+          }, 10)   
     }
 });
